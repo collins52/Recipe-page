@@ -1,0 +1,172 @@
+*{
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+
+@font-face {
+ font-family: young-serif;
+ src: url('./Assets/YoungSerif-Regular.ttf');
+ font-weight: bold;
+}
+
+@font-face {
+ font-family: outfit;
+ src: url('./Assets/Outfit-VariableFont_wght.ttf');
+}
+
+:root{
+ --light-purple: hsl(330, 100%, 98%);
+ --purple: hsl(332, 51%, 32%);
+ --brown:hsl(14, 45%, 36%);
+ --ash: hsla(30, 0%, 77%, 1) ;
+}
+
+body{
+ font-family: outfit;
+}
+
+hr {
+ margin: 30px 0;
+ border: 0.7px solid var(--ash);
+}
+
+span {
+ font-weight: bold;
+}
+
+header h1 {
+ font-family: young-serif;
+ line-height: 30px;
+}
+
+img {
+ width: 100vw;
+}
+
+.recipe-summary{
+ padding: 20px;
+}
+.recipe-summary p{
+ line-height: 25px;
+ margin: 20px 0;
+ padding: 5px 0;
+ text-align: left;
+}
+
+
+
+/*preparation*/
+.preparation-time {
+ background: var(--light-purple);
+ border-radius: 10px;
+ height: fit-content;
+ padding: 20px;
+ margin-top: 25px;
+}
+
+.preparation-time h2 {
+ color: var(--purple);
+ padding: 0 0 0 0;
+}
+
+.preparation-time ul {
+ list-style-type: none;
+}
+
+.preparation-time li {
+ display: flex;
+ align-items: center;
+}
+
+.preparation-time li::before {
+ content: '\2022';
+ font-size: 25px;
+ margin-right: 20px;
+}
+
+/*main*/
+main {
+ padding: 0 20px;
+}
+
+main h2 {
+ color: var(--brown);
+ font-family: young-serif;
+}
+
+
+/* Ingredent */
+.ingredient ul{
+ list-style-type: none;
+}
+
+.ingredient li::before{
+ /*had to create custom bullet for easy adjustment*/
+ content: "\2022"; /*custom bullet*/
+ font-size: 25px; /*increase bullet size*/
+ margin-right: 20px; /*Increase bullet right margin*/
+}
+
+.ingredient li {
+ margin: 20px 0 0 0;
+ line-height: 25px;
+ display: flex;
+ align-items: center;
+}
+
+/* instructions */
+.instructions li{
+ margin: 20px 0;
+ line-height: 28px;
+}
+
+ol{
+ list-style-type: none;
+ padding-left: 0;
+}
+
+ol li{
+ position: relative;
+ padding-left: 25px;
+}
+
+ol li::before {
+ /*Also had to create custom list for easy adjustment*/
+ content: counter(list-item) ".";
+ position: absolute;
+ left: 0;
+ color: var(--brown);
+ font-weight: bold;
+}
+
+/*Nutrition*/
+.Nutrition p{
+ margin-top: 20px;
+ line-height: 28px;
+}
+
+table{
+ border-collapse: collapse;
+ width: 80vw;
+ height: 30vh;
+ margin-top: 10px;
+}
+
+td {
+ padding: 20px;
+}
+
+tr{
+ border-bottom: 1px solid var(--ash);
+ width: 80vw;
+}
+
+tr:last-child{
+ border: none;
+}
+
+tr td:nth-child(2){
+ color: var(--brown);
+ font-weight: bold;
+}
