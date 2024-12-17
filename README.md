@@ -1,0 +1,1 @@
+A simple recipe page with just html and css. Fill free to practice with. Pls take note that this was designed on mobile 📱 so whatever layout doesn't fit was due to limitations. Here's a link to the code editor i used: https://play.google.com/store/apps/details?id=io.spck
